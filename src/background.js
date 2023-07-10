@@ -128,7 +128,11 @@ async function onMenuClicked (info) {
       }
 
       const documentPath = 'offscreen.html'
-      await offscreen.create(documentPath)
+      const hasDocument = await offscreen.hasDocument(documentPath)
+
+      if (!hasDocument) {
+        await offscreen.create(documentPath)
+      }
 
       message.sendSync({
         type: 'write-to-clipboard',
