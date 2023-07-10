@@ -1,0 +1,17 @@
+{
+  "EXT_NAME": {
+    "message": "Clipps"
+  },
+  "EXT_NAME_SHORT": {
+    "message": "Clipps"
+  },
+  "EXT_DESCRIPTION": {
+    "message": "Clipps"
+  },
+  "CLIPBOARD": {
+    "message": "Clipboard"
+  },
+  "CLEAR": {
+    "message": "Clear"
+  }
+}
