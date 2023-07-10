@@ -1,12 +1,12 @@
 {
   "EXT_NAME": {
-    "message": "Clipps"
+    "message": "Clipps - Recent clipboard history"
   },
   "EXT_NAME_SHORT": {
     "message": "Clipps"
   },
   "EXT_DESCRIPTION": {
-    "message": "Clipps"
+    "message": "Quick access to your recently copied text"
   },
   "CLIPBOARD": {
     "message": "Clipboard"
