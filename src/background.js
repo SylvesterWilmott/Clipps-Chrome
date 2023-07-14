@@ -18,7 +18,7 @@ async function init (info) {
   try {
     await buildClipsMenu()
 
-    if (info.reason === 'install') {
+    if ('reason' in info && info.reason === 'install') {
       await showOnboarding()
     }
   } catch (error) {
