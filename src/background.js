@@ -6,6 +6,7 @@ import * as menu from './js/menu.js'
 import * as message from './js/message.js'
 import * as offscreen from './js/offscreen.js'
 import * as storage from './js/storage.js'
+import * as tabs from './js/tabs.js'
 import * as uid from './js/uid.js'
 
 chrome.runtime.onStartup.addListener(init)
@@ -13,9 +14,24 @@ chrome.runtime.onInstalled.addListener(init)
 chrome.runtime.onMessage.addListener(onMessageReceived)
 chrome.contextMenus.onClicked.addListener(onMenuClicked)
 
-async function init () {
+async function init (info) {
   try {
     await buildClipsMenu()
+
+    if (info.reason === 'install') {
+      await showOnboarding()
+    }
+  } catch (error) {
+    handleError(error)
+  }
+}
+
+async function showOnboarding () {
+  try {
+    const path = 'onboarding/html/welcome.html'
+    const relativeUrl = chrome.runtime.getURL(path)
+
+    await tabs.create(relativeUrl)
   } catch (error) {
     handleError(error)
   }

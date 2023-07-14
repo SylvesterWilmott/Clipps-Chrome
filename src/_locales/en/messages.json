@@ -13,5 +13,32 @@
   },
   "CLEAR": {
     "message": "Clear"
+  },
+  "WELCOME": {
+    "message": "Welcome to Clipps"
+  },
+  "WELCOME_MESSAGE": {
+    "message": "Thanks for installing Clipps, the extension that lets you access your recent clipboard history. To get started:"
+  },
+  "TUTORIAL_STEP_1_NUMBER": {
+    "message": "1"
+  },
+  "TUTORIAL_STEP_2_NUMBER": {
+    "message": "2"
+  },
+  "TUTORIAL_STEP_3_NUMBER": {
+    "message": "3"
+  },
+  "TUTORIAL_STEP_1": {
+    "message": "Copy text from any web page."
+  },
+  "TUTORIAL_STEP_2": {
+    "message": "When you want to view your recent clipboard history, right-click anywhere to access the context menu or click on the extension icon and choose <code>Clipboard</code>."
+  },
+  "TUTORIAL_STEP_3": {
+    "message": "Click on an item in the list to copy it back to your clipboard."
+  },
+  "WELCOME_DISMISS": {
+    "message": "OK"
   }
 }
