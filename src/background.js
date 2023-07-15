@@ -9,18 +9,26 @@ import * as storage from './js/storage.js'
 import * as tabs from './js/tabs.js'
 import * as uid from './js/uid.js'
 
+chrome.runtime.onInstalled.addListener(onInstalled)
 chrome.runtime.onStartup.addListener(init)
-chrome.runtime.onInstalled.addListener(init)
 chrome.runtime.onMessage.addListener(onMessageReceived)
 chrome.contextMenus.onClicked.addListener(onMenuClicked)
+
+async function onInstalled(info) {
+  try {
+    await init()
+    
+    if (info && 'reason' in info && info.reason === 'install') {
+      await showOnboarding()
+    }
+  } catch (error) {
+    handleError(error)
+  }
+}
 
 async function init (info) {
   try {
     await buildClipsMenu()
-
-    if ('reason' in info && info.reason === 'install') {
-      await showOnboarding()
-    }
   } catch (error) {
     handleError(error)
   }
